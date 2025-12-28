@@ -16,9 +16,12 @@ st.sidebar.title('🏘️Select House Features')
 st.sidebar.image('https://img.freepik.com/free-vector/charming-house-with-tree-illustration_1308-176337.jpg?semt=ais_hybrid&w=740&q=80')
 all_value = []
 for i in X:
-  ans = st.sidebar.slider(f'Select {i} value') 
+  min_value = int(X[i].min())
+  max_value = int(X[i].max())
+  ans = st.sidebar.slider(f'Select {i} value', min_value, max_value) 
   all_value.append(ans)
 
-st.write(all_value)
+#st.write(all_value)
+
 
 
